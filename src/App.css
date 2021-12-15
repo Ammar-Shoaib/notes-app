@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 30px 15px;
   min-height: 100vh;
+}
+
+.notes-list {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.note {
+  background-color: #fef68a;
+  padding: 1rem;
+  min-height: 170px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+}
+
+.note-footer {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+
+.note.new {
+  background-color: #67d7cc;
+}
+
+textarea {
+  border: none;
+  resize: none;
+  background-color: #67d7cc;
+  outline: none;
+}
+
+.save {
+  border-radius: 15px;
+  border: none;
+  background-color: #e1e1e1;
+  padding: 5px 10px;
+}
+
+.save:hover {
+  background-color: #ededed;
+  cursor: pointer;
+}
+
+.delete-icon {
+  cursor: pointer;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.search input {
+  border: none;
+  background-color: rgb(233, 233, 233);
+  outline: none;
+  padding: 0 5px;
+  width: 100%;
+}
+
+.dark-mode {
+  background-color: black;
+}
+
+.dark-mode h1 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
